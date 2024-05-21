@@ -645,7 +645,7 @@ span.text{
  /*  SMALL POSTER  */
 
 #smallposter {
-    background-image: url(assets/R.jpeg);
+    background-image: url(Assets/R.jpeg);
     height: 40vh;
     width: 100%;
     background-size: cover;
