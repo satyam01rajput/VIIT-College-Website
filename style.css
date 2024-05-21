@@ -1,0 +1,2418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#above-nav{
+    width: 100%;
+    height: 6vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    
+   
+}
+
+#above-nav h4{
+    margin-left: 10px;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#above-nav div{
+    margin-right: 10px;
+    
+}
+
+#above-nav div img{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 4px;
+    margin-right: 4px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+#above-nav div img:nth-child(1):hover{
+    background: linear-gradient(90deg, rgba(14,143,176,1) 10%, rgba(255,0,202,1) 36%);
+}
+
+#above-nav div img:nth-child(2):hover{
+     background-color: blue;
+}
+
+#above-nav div img:nth-child(3):hover{
+     background-color: aqua;
+}
+
+      /* Popup container */
+      .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    /* Popup content */
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 450px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 999;
+        background-image: linear-gradient(135deg, #E8DBFC 10%, #F8F9D2 100%);
+        
+    }
+
+    .popup p{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    /* Close button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #555;
+    }
+    
+    .close-btn:hover {
+        color: #333;
+    }
+
+
+
+
+/*  NAVBAR */
+
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: white;
+    color: black;
+    
+}
+
+#header h2{
+    font-weight: bolder;
+    font-size: 34px;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #007BFF;
+}
+
+
+
+#navbar {
+    display: flex;
+    list-style: none;
+    margin-right: 25px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#navbar li {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bolder;
+}
+
+#navbar li a:hover{
+    color: #088178;
+}
+
+
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+#close{
+    display: none;
+}
+
+#mobile{
+    display: none;
+}
+
+.dropdown .dropbtn{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+.dropbtn {
+    
+    font-size: 18px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: transparent;
+    padding: 25px;
+    font-weight: bolder;
+}
+
+.dropbtn:hover{
+    color: #088178;
+    width: 100%;
+    height: 6vh;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    margin: 5px;
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    display: block;
+    border-bottom: 2px solid rgb(240, 232, 232);
+    font-weight: 600;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #007BFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin-top: -5px;
+}
+ 
+
+
+
+
+/* POSTER  */
+
+#poster {
+    width: 100%;
+    position: relative;
+    
+    background-color: white;
+  
+   opacity: 0.8;
+   background-size: cover;
+
+}
+
+ marquee {
+    color: yellow;
+    margin-top: 10px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    z-index: 999;
+}
+
+
+
+#poster div h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    font-size: 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     color: #088178;
+}
+
+#poster div h2{
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+     color: #088178;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#poster div h3{
+    font-weight: 700;
+    font-size: 28px;
+     color:#088178;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.carousel {
+    width: 100%;
+    height: 86vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.carousel-slide h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+#popup-logo{
+    z-index: 9999;
+    position: absolute;
+    top: 40vh;
+    left: 10px;
+    display: none;
+}
+
+
+
+/*COUNTER  */  /* NUMBER COUNTING  */
+
+
+
+
+.wrapper {
+    background-color: #000;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.wrapper .container{
+    width: 180px;
+    height: 180px;
+    
+}
+
+.container{
+    width: 100px;
+    height: 100px;
+    border: 1px solid orangered;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: relative;
+    font-size: 16px;
+    margin-right: 30px;
+    background-color: white;
+    border-bottom: 8px solid aqua;
+    border-radius: 20px;
+   
+}
+
+.container img{
+    justify-content: center;
+}
+
+span.num{
+    color: black;
+    display: grid;
+    place-items: center;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span.text{
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+/*  FROM DIRECTOR  */
+
+#from-director{
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
+    margin-bottom: 50px;
+   
+}
+
+#from-director-video{
+    width: 45%;
+    height: 70vh;
+    padding: 50px 80px;
+}
+
+#from-director-text{
+    width: 50%;
+    height: 70vh;
+    
+    padding-right: 80px;
+    padding-top: 20px;
+}
+
+#from-director-text h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#from-director-text p{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*  WHAT WE DO  */
+
+#what-we-do{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+   
+    
+}
+
+#what-we-do-text{
+    width: 45%;
+    height: 50vh;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+#what-we-do-text h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#what-we-do-text p{
+    font-size: 17;
+    font-weight: 500;
+}
+
+#what-we-do-image{
+    width: 45%;
+    height: 50vh;
+}
+
+
+
+/*   WHY  US  */
+
+#why-us{
+    display: flex;
+    padding: 250px 50px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    
+    
+   
+}
+
+#why-us #why-us-text{
+    width: 45%;
+    margin-left: 50px;
+    height: 45vh;
+    
+    position: relative;
+}
+
+#why-us #why-us-text div{
+    font-size: 16px;
+    font-weight: 500;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#why-us #why-us-text h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#why-us #why-us-text p{
+    font-size: 17;
+    font-weight: 500;
+}
+
+#why-us #why-us-text button{
+    width: 22%;
+    height: 35px;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#why-us #why-us-text button:hover{
+    transform: scale(1.05);
+}
+
+#why-us #why-us-text div button:nth-child(1){
+    background-image: linear-gradient(135deg, #FDD819 10%, #E80505 100%);
+}
+
+#why-us #why-us-text div button:nth-child(2){
+    background-image: linear-gradient(135deg, #cc208e 10%, #6713d2 100%);
+}
+
+#why-us #why-us-text div button:nth-child(3){
+    background-image: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);
+}
+
+#why-us #why-us-video{
+    width: 45%;
+   
+    height: 55vh;
+    margin-top: 70px;
+}
+
+
+
+
+/*  ABOUT SECTION   */
+
+#about-section{
+    display: flex;
+    height: 50vh;
+    padding: 250px 50px;
+    margin-top: 50px;
+    align-items: center;
+    background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
+   
+
+}
+
+#about-section #about-section-video{
+    width: 45%;
+    height: 40vh;
+    margin-right: 100px;
+    background-image: url(Assets/poster.webp);
+    background-size: cover;
+   
+
+}
+
+#about-section #about-section-text{
+    width: 45%;
+}    
+
+#about-section #about-section-text h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#about-section #about-section-text button{
+    width: 20%;
+    height: 35px;
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid black;
+}
+
+#about-section #about-section-text p{
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+#about-section #about-section-text div button a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#about-section #about-section-text div button:nth-child(1){
+   background-color: rgb(249, 87, 87);
+}
+
+#about-section #about-section-text div button:nth-child(2){
+    background-color: #52E5E7;
+ }
+
+ #about-section #about-section-text div button:nth-child(1):hover{
+    background-color: red;
+    transform: scale(1.05);
+ }
+
+ #about-section #about-section-text div button:nth-child(2):hover{
+    background-color: #00fbff;
+    transform: scale(1.05);
+ }
+
+
+ /*  SMALL POSTER  */
+
+#smallposter {
+    background-image: url(assets/R.jpeg);
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 90% top;
+    margin-bottom: 50px;
+    margin-top: 5px;
+
+}
+
+#smallposter div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: 100px;
+    height: 40vh;
+    width: 30%;
+    color: whitesmoke;
+
+}
+
+#smallposter h1{
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#smallposter h2{
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* OUR COURSES  */
+
+#our-courses{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#our-courses h2{
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#our-courses div{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#our-courses div h3{
+    display: flex;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    width: 30%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 70px;
+    
+    
+}
+
+#our-courses div h3:hover{
+    background-image: linear-gradient(135deg, #6a11cb 10%, #2575fc 100%);
+   
+}
+
+#our-courses div h3 a{
+    text-decoration: none;
+    color:#000000;
+}
+
+
+/*  FOOTER  */
+
+#footer{
+    border-top: 2px solid black;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-image: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#footer li a{
+    text-decoration: none;
+    color: white;
+}
+
+#footer1{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 25%;
+   
+}
+
+#footer1 img{
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+#footer1 h4{
+   
+    margin-bottom: 7px;
+}
+
+#footer2{
+    margin-bottom: 20px;
+    margin-top: 10px;
+   
+    width: 20%;
+}
+
+#footer2 h2{
+    margin-bottom: 15px;
+}
+
+#footer2 li{
+    margin-bottom: 5px;
+    font-weight: 500;
+    
+}
+
+#footer3{
+    width: 20%;
+   
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#footer3 h2{
+    margin-bottom: 15px;
+}
+
+#footer3 li {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#footer4{
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 35px;
+    justify-content: center;
+}
+
+#footer4 div{
+    display: flex;
+    margin-bottom: 10px;  
+    
+}
+
+#footer4  h2{
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#footer4 div img{
+    margin-right: 20px;
+    
+}
+
+#footer4 div:nth-child(3) img{
+    margin-right: 5px;
+}
+
+
+
+#footer4 #small-icons img{
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: white;
+    
+}
+
+#ending{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    background-color: #000000;
+    height: 11vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#ending h4{
+    font-weight: 300;
+   
+    margin-bottom: 5px;
+}
+
+#ending h5{
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+#ending h6{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+/* ABOUT PAGE  */
+
+#about-before-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+    padding: 20px;
+    background-image: linear-gradient(135deg, #209cff 10%, #68e0cf 100%);
+}
+
+#about-before-navbar img{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+#about-before-navbar div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#about-before-navbar h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    font-size: 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#about-before-navbar h2{
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#about-before-navbar h3{
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+
+
+#about{
+    display: flex;
+    
+}
+
+#about-nav-details{
+    width: 100%;
+}
+
+#about-sec-text{
+    margin: 15px 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#about-sec-text h3{
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#about-sec-text h3 a{
+    text-decoration: none;
+    color: blue;
+}
+
+#about-sec-text h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#about-sec-text p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+#underline{
+    border: 3px solid gray;
+    margin-bottom: 20px;
+}
+
+/* FACULTIES  */
+
+#faculty-members{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#faculty-members h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#faculty-members h2{
+    text-align: center;
+    
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#faculty-members h5{
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.feature-box {
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+   
+
+}
+
+.container-box{
+    width: 300px;
+    height: 300px;
+     display: flex;
+     flex-direction: row;
+     perspective: 500px;
+     border-radius: 20px;
+     margin: 30px;
+     
+ }
+
+ 
+ 
+ .card{
+     height: 100%;
+     width: 100%;
+     
+     position: relative;
+     transition: transform 1500ms;
+     transform-style: preserve-3d;
+     perspective: 500px;
+    
+     
+ }
+
+ .card .front img{
+    margin-bottom: 50px;
+ }
+
+ .card .front h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+ }
+ 
+ .card .front h3{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ 
+ .container-box:hover > .card{
+     cursor: pointer;
+     transform: rotateY(180deg);
+ }
+ 
+ .front,
+ .back{
+     height: 100%;
+     width: 100%;
+    
+     box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+     position: absolute;
+     backface-visibility: hidden;
+     border: 2px solid black;
+ }
+ 
+ .front{
+     background-color: white;
+     backdrop-filter: blur(10px);
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: flex-end;
+     padding: 15px;
+     background-image: linear-gradient(135deg, #0acffe 10%, #495aff 100%);
+ 
+ }
+
+ 
+ 
+ .back{
+     background-color: black;
+     color: whitesmoke;
+     transform: rotateY(180deg);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 15px;
+     flex-direction: column;
+ }
+
+ .back h4{
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .back p{
+    font-size: 14px;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ 
+
+
+/*   CONTACT PAGE   */
+
+#contact-details{
+    display: flex;
+}
+
+#contact-details-field{
+    width: 50%;
+   
+    padding: 70px;
+}
+
+#contact-details-field h5{
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+
+.form-container {
+    max-width: 600px;
+   
+   
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2{
+    margin-bottom: 30px;
+    color: blue;
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.radio-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+
+input[type="radio"] {
+    margin-right: 30px;
+    
+}
+
+#form-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    width: 30%;
+    justify-content: center;
+}
+
+#form-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+#contact-details-info{
+    width: 50%;
+   
+    padding: 90px;
+}
+
+#contact-details-info h2{
+    margin-bottom: 30px;
+    color: blue;
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#contact-details-info div{
+    display: flex;
+    margin-bottom: 20px;
+    text-align: center;
+   
+}
+
+#contact-details-info div h3{
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+#contact-details-info div img{
+    margin-right: 20px;
+}
+
+#contact-map iframe{
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 20px;
+}
+
+/*  COURSES   */
+
+/*dca*/
+
+#dca{
+    display: flex;
+}
+
+#dca-details{
+    width: 70%;
+    
+    border-right: 3px solid gray;
+    padding: 10px 40px;
+}
+
+#dca-details div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+#dca-details div h4{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#dca-details div h4 a{
+    text-decoration: none;
+    color: blue;
+}
+
+#dca-details div h1{
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#dca-details div h2{
+    font-weight: bolder;
+    font-size: 26px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#dca-details h3{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#dca-details li{
+    margin-bottom: 10px;
+    list-style-type: none;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#dca-details div h3 a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#extra-course-images{
+    display: flex;
+    width: 100%;
+}
+
+#extra-course-images div{
+    width: 25%;
+    margin: 10px;
+    height: 50vh;
+}
+
+#extra-course-images div:nth-child(1){
+    background-image: url(Assets/cpct.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images div:nth-child(2){
+    background-image: url(Assets/tally.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images div:nth-child(3){
+    background-image: url(Assets/cpct2.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images div:nth-child(4){
+    background-image: url(Assets/python.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images div:hover{
+    transform: scale(1.1);
+}
+
+#extra-course-images-pgdca{
+    display: flex;
+    width: 100%;
+}
+
+#extra-course-images-pgdca div{
+    width: 25%;
+    margin: 10px;
+    height: 50vh;
+}
+
+#extra-course-images-pgdca div:nth-child(1){
+    background-image: url(Assets/1.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images-pgdca div:nth-child(2){
+    background-image: url(Assets/2.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images-pgdca div:nth-child(3){
+    background-image: url(Assets/3.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images-pgdca div:nth-child(4){
+    background-image: url(Assets/4.jpeg);
+    background-size: cover;
+}
+
+#extra-course-images-pgdca div:hover{
+    transform: scale(1.1);
+}
+
+
+
+#dca-registration{
+    width: 30%;
+    position: relative;
+    
+    
+}
+
+#dca-registration h2{
+    font-weight: bolder;
+    font-size: 32px;
+    color: black;
+    font-family: cursive;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: absolute;
+    top: 1vh;
+}
+
+/* STUDENT CORNER NOTIFICATIONS */
+
+.container {
+    width: 100%;
+    height: 100%;
+    
+    
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+ }
+
+
+.notification-list {
+    padding: 20px;
+   
+}
+
+.notification {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.notification img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.notification.success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid #28a745;
+    width: 100%;
+}
+
+.notification.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    width: 100%;
+}
+
+.notification.info {
+    background-color: rgba(23, 162, 184, 0.1);
+    border-left: 4px solid #17a2b8;
+    width: 100%;
+}
+
+
+ 
+/* BLOG  */
+
+
+
+#blog {
+    padding: 100px 100px 0 100px;
+}
+
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+
+}
+
+
+
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-details {
+    width: 50%;
+}
+
+#blog .blog-details a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+
+}
+
+#blog .blog-details a::after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 9.5px;
+    right: -50px;
+}
+
+#blog .blog-details a:hover {
+    color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+    background-color: #088178;
+}
+
+#blog .blog-box h1 {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: -999;
+}
+
+#blog .blog-box .blog-details h4 {
+    margin-bottom: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: #0056b3;
+    font-size: 24px;
+}
+
+#blog .blog-box .blog-details p {
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*  SYLLABUS page  */
+
+#syllabus-heading{
+    margin-top: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+#syllabus-heading h1{
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#syllabus-heading p{
+    border-top: 10px solid rgb(206, 15, 15);
+    border-bottom: 2px solid blue;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#syllabus-content{
+    margin-top: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+#syllabus-content .syllabus-content-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 5px;
+    height: 7vh;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
+    
+}
+
+#syllabus-content .syllabus-content-div div{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    
+}
+
+#syllabus-content .syllabus-content-div div h3{
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#syllabus-content .syllabus-content-div button{
+    border: 1px solid rgb(53, 202, 53);
+    background-color:  rgb(53, 202, 53);
+    
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    
+   
+}
+
+#syllabus-content .syllabus-content-div button:hover{
+    background-color: rgb(0, 252, 0);
+    border-color: rgb(0, 252, 0);
+}
+
+#syllabus-content .syllabus-content-div button img{
+    margin-left: 10px;
+}
+
+.downloaded{
+    display: none;
+}
+
+
+
+
+@media(max-width:791px){
+    #header{
+        
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+   
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 0 0 10px;
+        font-weight: bolder;
+        font-size: 22px;
+        height: 100vh;
+        width: 230px;
+        background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+        border-left: 2px solid black;
+        color: whitesmoke;
+       position: fixed;
+       top: 6vh;
+       right: -325px;
+       box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+       transition: 0.3s;
+       z-index: 999;
+    }
+
+    #navbar li a{
+        color: whitesmoke;
+        font-size: 22px;
+    }
+
+    #navbar li a.active {
+        color: black;
+    }
+
+    #navbar .dropbtn{
+        color: whitesmoke;
+        font-size: 22px;
+        
+    }
+
+   
+
+    #navbar.active{
+        right: -25px;
+        
+    }
+
+    #bar.active{
+        z-index: 0;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+
+    #mobile{
+        display: flex;
+    }
+
+    /*POSTER  */
+
+    .carousel{
+    height: 50vh;
+    }
+
+    #poster h1{
+          font-size: 24px;
+    }
+
+    #poster h2{
+         font-size: 18px;
+    }
+
+    #poster h3{
+        font-size: 20px;
+    }
+
+    .wrapper{
+        padding-left: 20px;
+    }
+   
+    #from-director{
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        padding: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #from-director-video{
+        width: 100%;
+        height: 50vh;
+        padding: 0px 0px;
+        margin-bottom: 30px;
+        
+
+    }
+
+    #from-director-text{
+        width: 100%;
+        margin-top: 0px;
+        padding: 0px;
+        font-size: 14px;
+        
+    }
+
+    #what-we-do{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 70vh;
+        
+        padding: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #what-we-do-image{
+        width: 100%;
+        margin-left: 110px;
+        margin-top: 0px;
+    }
+
+    #what-we-do-text{
+        width: 100%;
+        padding: 0px;
+        height: 20vh;
+    }
+
+    #about-section{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        height: 80vh;
+        margin-top: 0px;
+    }
+
+    #about-section #about-section-video{
+        width: 100%;
+        background-image: url(Assets/poster.webp);
+        margin-left: 100px;
+        margin-bottom: 70px;
+    }
+
+    #about-section #about-section-text{
+        width: 100%;
+    }
+
+    #why-us{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 50px;
+        margin-top: 30px;
+        height: 85vh;
+    }
+
+    #why-us #why-us-video{
+        width: 100%;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    #why-us #why-us-text{
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    #why-us #why-us-text button {
+       width: 30%;
+      margin-right: 15px;
+    }
+
+    #smallposter{
+        height: 30vh;
+    }
+
+    #our-courses div{
+        padding: 4px;
+        text-align: center;
+    }
+
+    #our-courses div h3{
+        width: 45%;
+        height: 80px;
+        padding: 4px;
+    }
+    
+    #smallposter div{
+        height: 30vh;
+        width: 40%;
+        margin-left: 50px;
+    }
+
+    #footer #footer2{
+        display: none;
+    }
+
+   
+
+
+    .active2{
+        right: 0px;
+    }
+
+    #about-before-navbar{
+        margin-top: 0px;
+    }
+
+    #about-before-navbar img{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #about-before-navbar h1{
+        font-size: 26px;
+    }
+
+    #about-before-navbar h2{
+        font-size: 18px;
+    }
+
+    #about-before-navbar h3{
+        font-size: 22px;
+    }
+
+    #faculty-members{
+        width: 100%;
+        
+    }
+
+    .feature-box{
+        margin: 0px;
+    }
+
+    #blog{
+        padding: 80px;
+    }
+
+    #blog .blog-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #blog .blog-img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #blog .blog-details{
+        width: 100%;
+    }
+
+    #contact-details{
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    #contact-details-field{
+        width: 100%;
+       padding: 0px;
+    }
+
+    #contact-details-field .form-container{
+        max-width: 650px;
+    }
+
+    #contact-details-info{
+        width: 100%;
+        padding: 50px;
+        background-color: rgb(221, 215, 215);
+    }
+
+    #contact-map iframe {
+        height: 50vh;
+    }
+
+    #dca-details{
+        width: 100%;
+        padding: 25px;
+        border: 2px solid black;
+    }
+
+    #dca-registration{
+        display: none;
+    }
+
+    #extra-course-images div:nth-child(2){
+        display: none;
+    }
+    #extra-course-images div:nth-child(3){
+        display: none;
+    }
+
+    #extra-course-images div{
+        width: 50%;
+    }
+
+    #extra-course-images-pgdca div:nth-child(2){
+        display: none;
+    }
+    #extra-course-images-pgdca div:nth-child(3){
+        display: none;
+    }
+
+    #extra-course-images-pgdca div{
+        width: 50%;
+    }
+
+    /*for student section */
+
+    #syllabus-content .syllabus-content-div div{
+        
+        width: 70%;
+        
+    }
+
+    #syllabus-content .syllabus-content-div div:nth-child(2){
+        display: none;
+    }
+        
+    
+    
+}
+
+
+/*FOR MOBILE SCREEEN */
+
+@media (max-width:477px){
+
+    .wrapper{
+        flex-wrap: wrap;
+        
+    }
+
+    .wrapper .container{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .popup-container{
+        width: 100%;
+    }
+
+    .popup{
+        width: 330px;
+        height: 75vh;
+        font-size: 16px;
+    }
+
+    .popup p{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    #above-nav div img{
+        margin-right: 2px;
+    }
+
+    #header{
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 6vh;
+    }
+
+    #navbar{
+        padding: 70px 0 0 10px;
+    }
+
+    #header h2{
+        margin-left: 0px;
+    }
+
+    .dropdown-content{
+        margin-left: -230px;
+       
+    }
+
+    #from-director{
+        padding: 20px;
+        height: 105vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    #from-director-video{
+        height: 25vh;
+    }
+
+    #above-nav div{
+        margin-right: 0px;
+    }
+
+    #above-nav h4 {
+        margin-left: 2px;
+    }
+
+    #navbar{
+        padding: 60px 0 0 10px;
+        font-size: 14px;
+        width: 200px;
+       
+        
+    }
+
+    #navbar li{
+        font-size: 14px;
+        padding: 20px;
+        font-weight: 500;
+    }
+
+    #poster{
+        height: 86vh;
+        background-image: url(Assets/bgimgposter.jpg);
+        background-size: cover;
+    }
+
+   
+
+
+
+    #poster div h1 {
+        font-size: 20px;
+    }
+
+    #poster div h2{
+        font-size: 14px;
+    }
+
+    #poster div h3{
+        font-size: 14px;
+    }
+
+    .carousel{
+        height: 50vh;
+        display: none;
+    }
+
+    #from-director-text{
+        height: 90vh;
+    }
+
+    #what-we-do{
+        padding: 20px;
+       height: 70vh;
+    }
+
+    #what-we-do-image{
+        height: 30vh;
+        margin-left: 0px;
+        
+    }
+
+    #what-we-do-text{
+        height: 30vh;
+        font-size: 14px;
+    }
+
+    #about-section{
+        padding: 20px;
+        height: 95vh;
+    }
+
+    #about-section #about-section-video{
+        margin-bottom: 30px;
+    }
+
+    #about-section #about-section-text div button{
+        width: 40%;
+        font-size: 14px;
+    }
+
+   #why-us{
+    padding: 20px;
+    height: 85vh;
+    margin-bottom: 30px;
+   }
+
+   #why-us #why-us-text{
+    margin-left: 0px;
+    height: 50vh;
+    font-size: 14px;
+    
+   }
+
+   #why-us #why-us-text div button{
+    width: 27%;
+    margin-top: 15px;
+    
+   }
+
+   #why-us #why-us-text div{
+    margin-top: 10px;
+   }
+
+   #why-us #why-us-video{
+    margin-left: 30px;
+    height: 25vh;
+   }
+
+   #smallposter{
+    height: 30vh;
+   
+   }
+
+   #smallposter div{
+       width: 60%;
+       margin-left: 10px;
+   }
+
+   #smallposter h1{
+    font-size: 24px;
+   }
+
+   #smallposter h2{
+    font-size: 22px;
+   }
+
+   #our-courses div{
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+   }
+
+   #our-courses div h3{
+    width: 48%;
+    height: 85px;
+    margin-right: 0px;
+    font-size: 22px;
+    padding: 2px;
+    
+   }
+
+   #footer{
+    flex-wrap: wrap;
+    padding: 20px;
+   }
+
+   #footer #footer1{
+    width: 30%;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
+   }
+
+   #footer1 img{
+    display: none;
+   }
+
+   #footer1 h4{
+    font-size: 14px;
+   }
+
+   #footer #footer2{
+    width: 30%;
+    display: initial;
+   }
+
+   #footer2 h2{
+    font-size: 18px;
+   }
+
+   #footer2 li{
+    font-size: 10px;
+   }
+
+   #footer #footer3{
+    width: 30%;
+   }
+
+   #footer3 h2{
+    font-size: 18px;
+   }
+
+   #footer3 li{
+    font-size: 10px;
+   }
+
+   #footer #footer4{
+    margin-right: 0px;
+   }
+
+   #footer4{
+    margin-left: 10px;
+    margin-top: 0px;
+    display: none;
+   }
+
+   #footer4 h2{
+    font-size: 18px;
+   }
+
+   #footer4 h4{
+    font-size: 10px;
+   }
+
+   #footer4 #small-icons{
+    display: none;
+   }
+
+   #ending{
+    height: 9vh;
+   }
+
+   #ending h4{
+    font-size: 10px;
+   }
+
+   #ending h5{
+    font-size: 10px;
+   }
+
+   #ending h6{
+    font-size: 8px;
+   }
+
+   #about-before-navbar{
+    border-top: 2px solid black;
+    padding: 8px;
+    text-align: center;
+   }
+
+   #about-before-navbar img{
+    display: none;
+   }
+
+   #about-before-navbar h1{
+    font-size: 17px;
+   }
+
+   #about-before-navbar h2{
+    font-size: 11px;
+   }
+
+   #about-before-navbar h3{
+    font-size: 12px;
+   }
+
+   #about-sec-text p{
+    font-size: 14px;
+   }
+
+   #faculty-members h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+   }
+
+   #faculty-members h2{
+    font-size: 14px;
+    font-weight: 700;
+   }
+
+   #faculty-members h5{
+    font-size: 14px;
+    font-weight: 700;
+   }
+
+   #blog{
+    padding: 20px;
+    padding-top: 40px;
+   }
+
+   #blog .blog-img{
+    margin-right: 0px;
+   }
+
+   #blog .blog-box .blog-details p{
+    font-size: 12px;
+   }
+
+   #contact-details{
+    padding: 20px;
+    margin-bottom: 30px;
+   }
+
+   input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+   }
+
+   #form-button{
+    width: 40%;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+
+   #contact-details-info{
+    padding: 20px;
+    background-color: white;
+   }
+
+   #contact-details-info div h3{
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   }
+
+  
+
+   #syllabus-heading{
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+
+   #syllabus-heading p{
+    font-size: 15px;
+   }
+
+   #syllabus-content{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+   }
+
+   #syllabus-content .syllabus-content-div div h3 {
+    font-size: 14px;
+   }
+
+   #syllabus-content .syllabus-content-div button{
+    font-size: 12px;
+   }
+
+   #dca-details{
+    padding: 20px;
+   }
+
+   #dca-details div h2{
+    font-size: 20px;
+   }
+
+   #dca-details h3{
+    font-size: 12px;
+   }
+
+   #dca-details li{
+    font-size: 12px;
+   }
+
+   #extra-course-images-pgdca{
+    display: none;
+   }
+
+   #extra-course-images{
+    display: none;
+   }
+
+
+}
