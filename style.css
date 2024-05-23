@@ -41,7 +41,7 @@
 }
 
 #above-nav div img:nth-child(1):hover{
-    background: linear-gradient(90deg, rgba(14,143,176,1) 10%, rgba(255,0,202,1) 36%);
+   background-color: rgb(246, 3, 165);
 }
 
 #above-nav div img:nth-child(2):hover{
@@ -50,6 +50,10 @@
 
 #above-nav div img:nth-child(3):hover{
      background-color: aqua;
+}
+
+#above-nav div img:nth-child(4):hover{
+    background-color: rgb(238, 16, 16);
 }
 
       /* Popup container */
@@ -174,6 +178,10 @@
     left: 20px;
 }
 
+#notificationnavbar{
+    display: none;
+}
+
 #close{
     display: none;
 }
@@ -214,7 +222,7 @@
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 220px;
+    width: 220px;
     margin: 5px;
     box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -410,23 +418,25 @@ span.text{
 /*  FROM DIRECTOR  */
 
 #from-director{
-    height: 70vh;
+   
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
     margin-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 20px;
    
 }
 
 #from-director-video{
     width: 45%;
-    height: 70vh;
+  
     padding: 50px 80px;
 }
 
 #from-director-text{
     width: 50%;
-    height: 70vh;
+   
     
     padding-right: 80px;
     padding-top: 20px;
@@ -458,14 +468,14 @@ span.text{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50vh;
+    
    
     
 }
 
 #what-we-do-text{
     width: 45%;
-    height: 50vh;
+    
     padding-top: 50px;
     padding-left: 100px;
 }
@@ -484,7 +494,7 @@ span.text{
 
 #what-we-do-image{
     width: 45%;
-    height: 50vh;
+    
 }
 
 
@@ -493,10 +503,10 @@ span.text{
 
 #why-us{
     display: flex;
-    padding: 250px 50px;
+    padding: 50px 50px;
     justify-content: space-between;
     align-items: center;
-    height: 50vh;
+   
     
     
    
@@ -559,7 +569,7 @@ span.text{
 #why-us #why-us-video{
     width: 45%;
    
-    height: 55vh;
+   
     margin-top: 70px;
 }
 
@@ -570,8 +580,8 @@ span.text{
 
 #about-section{
     display: flex;
-    height: 50vh;
-    padding: 250px 50px;
+    
+    padding: 70px 50px;
     margin-top: 50px;
     align-items: center;
     background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
@@ -1423,9 +1433,13 @@ input[type="radio"] {
 .container {
     width: 100%;
     height: 100%;
-    
+   
     
      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .container2 h2{
+    text-align: center;
  }
 
 
@@ -1464,19 +1478,19 @@ input[type="radio"] {
 
 .notification.success {
     background-color: rgba(40, 167, 69, 0.1);
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #2be557;
     width: 100%;
 }
 
 .notification.error {
     background-color: rgba(220, 53, 69, 0.1);
-    border-left: 4px solid #dc3545;
+    border-left: 4px solid #ff3145;
     width: 100%;
 }
 
 .notification.info {
     background-color: rgba(23, 162, 184, 0.1);
-    border-left: 4px solid #17a2b8;
+    border-left: 4px solid #0fcdea;
     width: 100%;
 }
 
@@ -1723,6 +1737,10 @@ input[type="radio"] {
         display: flex;
     }
 
+    #notificationnavbar{
+        display: initial;
+    }
+
     /*POSTER  */
 
     .carousel{
@@ -1748,7 +1766,7 @@ input[type="radio"] {
     #from-director{
         display: flex;
         flex-direction: column;
-        height: 90vh;
+        
         padding: 50px;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -1756,7 +1774,7 @@ input[type="radio"] {
 
     #from-director-video{
         width: 100%;
-        height: 50vh;
+      
         padding: 0px 0px;
         margin-bottom: 30px;
         
@@ -1774,7 +1792,7 @@ input[type="radio"] {
     #what-we-do{
         display: flex;
         flex-direction: column-reverse;
-        height: 70vh;
+        
         
         padding: 50px;
         align-items: center;
@@ -1797,7 +1815,7 @@ input[type="radio"] {
         display: flex;
         flex-direction: column;
         padding: 50px;
-        height: 80vh;
+       
         margin-top: 0px;
     }
 
@@ -1817,13 +1835,14 @@ input[type="radio"] {
         flex-direction: column-reverse;
         padding: 50px;
         margin-top: 30px;
-        height: 85vh;
+       
     }
 
     #why-us #why-us-video{
         width: 100%;
         margin-left: 50px;
         margin-top: 0px;
+        margin-bottom: 40px;
     }
 
     #why-us #why-us-text{
@@ -1984,6 +2003,10 @@ input[type="radio"] {
     #syllabus-content .syllabus-content-div div:nth-child(2){
         display: none;
     }
+
+    .notification-list{
+        padding: 10px;
+    }
         
     
     
@@ -2040,13 +2063,15 @@ input[type="radio"] {
     }
 
     .dropdown-content{
-        margin-left: -230px;
+        margin-left: -192px;
+        margin-bottom: 100px;
+        width: 180px;
        
     }
 
     #from-director{
         padding: 20px;
-        height: 105vh;
+       
         margin-top: 20px;
         margin-bottom: 20px;
         padding-bottom: 20px;
@@ -2079,9 +2104,18 @@ input[type="radio"] {
     }
 
     #poster{
-        height: 86vh;
+        height: 87vh;
         background-image: url(Assets/bgimgposter.jpg);
         background-size: cover;
+    }
+
+    #poster div{
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        padding: 6px;
     }
 
    
@@ -2105,29 +2139,28 @@ input[type="radio"] {
         display: none;
     }
 
-    #from-director-text{
-        height: 90vh;
-    }
+    
 
     #what-we-do{
         padding: 20px;
-       height: 70vh;
+        margin-bottom: 130px;
+    
     }
 
     #what-we-do-image{
-        height: 30vh;
+       
         margin-left: 0px;
         
     }
 
     #what-we-do-text{
-        height: 30vh;
+       
         font-size: 14px;
     }
 
     #about-section{
         padding: 20px;
-        height: 95vh;
+       
     }
 
     #about-section #about-section-video{
@@ -2141,13 +2174,13 @@ input[type="radio"] {
 
    #why-us{
     padding: 20px;
-    height: 85vh;
+    
     margin-bottom: 30px;
    }
 
    #why-us #why-us-text{
     margin-left: 0px;
-    height: 50vh;
+    height: 65vh;
     font-size: 14px;
     
    }
@@ -2155,6 +2188,7 @@ input[type="radio"] {
    #why-us #why-us-text div button{
     width: 27%;
     margin-top: 15px;
+    font-size: 12px;
     
    }
 
@@ -2414,5 +2448,153 @@ input[type="radio"] {
     display: none;
    }
 
+
+}
+
+@media(max-width:377px){
+
+    .wrapper .container{
+        width: 125px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .popup{
+        width: 300px;
+        padding: 10px;
+    }
+
+    .popup p{
+        font-size: 13px;
+    }
+
+    #navbar{
+        width: 130px;
+    }
+
+    #navbar li{
+        padding: 15px;
+        font-size: 14px;
+
+    }
+
+    #navbar li a{
+        font-size: 15px;
+    }
+
+    #navbar .dropbtn{
+        font-size: 15px;
+    }
+
+    #poster div{
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        padding: 6px;
+    }
+
+    #poster div h1{
+        color: rgb(43, 0, 255);
+        font-size: 20px;
+    }
+
+    #poster div h2{
+        color: black;
+        font-size: 14px;
+    }
+
+    #poster div h3{
+        color: black;
+        text-align: center;
+    }
+
+    
+
+    #from-director-text h2{
+        font-size: 23px;
+    }
+
+    #why-us #why-us-text{
+        margin-left: 0px;
+        height: 70vh;
+        font-size: 14px;
+        
+       }
+
+       #smallposter{
+        height: 25vh;
+       
+       }
+    
+       #smallposter div{
+           width: 50%;
+           margin-left: 10px;
+       }
+    
+       #smallposter h1{
+        font-size: 20px;
+       }
+    
+       #smallposter h2{
+        font-size: 16px;
+       }
+
+       #our-courses div h3{
+       
+        font-size: 18px;
+       
+        
+       }
+
+       #about-sec-text h2 {
+        font-size: 24px;
+       }
+
+       #faculty-members h1{
+        font-size: 24px;
+       }
+
+       #faculty-members h2{
+        font-size: 12px;
+       }
+
+       #faculty-members h5{
+        font-size: 12px;
+       }
+
+       .container-box{
+        width: 250px;
+        height: 250px;
+       }
+
+       .back h4 {
+        font-size: 12px;
+       }
+
+       #blog .blog-img{
+        margin-bottom: 30px;
+       }
+
+       #blog .blog-box .blog-details h4{
+        font-size: 20px;
+       }
+
+       #contact-details-field {
+        margin-bottom: 30px;
+       }
+
+       #form-button{
+        font-size: 15px;
+       }
+
+       #contact-details-info div h3{
+        font-size: 16px;
+       }
+
+       #contact-details-info h2 {
+        font-size: 22px;
+       }
 
 }

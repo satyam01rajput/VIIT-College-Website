@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Delay the popup by 3 seconds after the page loads
-    setTimeout(showPopup, 3000);
+    setTimeout(showPopup, 2000);
 
     // Close the popup when close button is clicked
     closeBtn.addEventListener('click', function() {
@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { type: 'success', message: 'Exam Results are out', image: 'https://via.placeholder.com/40' },
         { type: 'error', message: 'Exam Forms for BCA  are Out collect it from Office', image: 'https://via.placeholder.com/40' },
         { type: 'info', message: 'workshop on Python on 1/7/24', image: 'https://via.placeholder.com/40' },
-        { type: 'success', message: '1/7/24 will be holiday', image: 'https://via.placeholder.com/40' },
+        { type: 'error', message: '1/7/24 will be holiday', image: 'https://via.placeholder.com/40' },
         { type: 'success', message: 'Today is halfday', image: 'https://via.placeholder.com/40' },
-        { type: 'success', message: '1/7/24 will be holiday', image: 'https://via.placeholder.com/40' }
+        { type: 'info', message: '1/7/24 will be holiday', image: 'https://via.placeholder.com/40' }
     ];
 
     let index = 0;
@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the loop
     showNotifications();
 });
+
+
 
 /*  FOR TABLET VIEW NAVBAR */
 
