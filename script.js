@@ -1,32 +1,32 @@
-// popup for page
+// // popup for page
 
-document.addEventListener('DOMContentLoaded', function() {
-    const popupContainer = document.getElementById('popupContainer');
-    const closeBtn = document.getElementById('closeBtn');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const popupContainer = document.getElementById('popupContainer');
+//     const closeBtn = document.getElementById('closeBtn');
 
-    // Function to show the popup after 3 seconds
-    function showPopup() {
-        popupContainer.style.display = 'block';
-    }
+//     // Function to show the popup after 3 seconds
+//     function showPopup() {
+//         popupContainer.style.display = 'block';
+//     }
 
-    // Delay the popup by 3 seconds after the page loads
-    setTimeout(showPopup, 2000);
+//     // Delay the popup by 3 seconds after the page loads
+//     setTimeout(showPopup, 2000);
 
-    // Close the popup when close button is clicked
-    closeBtn.addEventListener('click', function() {
-        popupContainer.style.display = 'none';
-    });
+//     // Close the popup when close button is clicked
+//     closeBtn.addEventListener('click', function() {
+//         popupContainer.style.display = 'none';
+//     });
 
-    // Prevent scrolling when the popup is open
-    popupContainer.addEventListener('click', function(event) {
-        if (event.target === popupContainer) {
-            popupContainer.style.display = 'none';
-        }
-    });
+//     // Prevent scrolling when the popup is open
+//     popupContainer.addEventListener('click', function(event) {
+//         if (event.target === popupContainer) {
+//             popupContainer.style.display = 'none';
+//         }
+//     });
 
-    // Add class to body to prevent scrolling when popup is open
-    document.body.classList.add('popup-open');
-});
+//     // Add class to body to prevent scrolling when popup is open
+//     document.body.classList.add('popup-open');
+// });
 
 
 

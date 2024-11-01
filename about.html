@@ -45,7 +45,7 @@
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a>Why Us?</a></li>
+               <!-- <li><a>Why Us?</a></li> -->
                 <li><a href="facilities.html">Facilities</a></li>
                 <div class="dropdown">
                     <button class="dropbtn">Courses </button>
@@ -378,7 +378,6 @@
                 <img src="https://cdn.hugeicons.com/icons/linkedin-02-stroke-rounded.svg" alt="linkedin-02" width="32"
                     height="32" />
             </div>
-
         </div>
     </section>
     <section id="ending">
@@ -388,7 +387,25 @@
         <h6><a href="#">Privacy Policy | Terms of Use</a></h6>
     </section>
 
+    <script>
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
 
+
+        if (bar) {
+            bar.addEventListener('click', () => {
+                nav.classList.add('active');
+
+            })
+        }
+
+        if (close) {
+            close.addEventListener('click', () => {
+                nav.classList.remove('active');
+            })
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 

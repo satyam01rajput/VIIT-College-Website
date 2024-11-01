@@ -42,7 +42,7 @@
              <ul id="navbar">
                  <li><a  href="index.html">Home</a></li>
                  <li><a href="about.html">About</a></li>
-                 <li><a>Why Us?</a></li>
+                <!-- <li><a>Why Us?</a></li> -->
                 
                  <div class="dropdown">
                      <button class="dropbtn" class="active">Courses  </button>
@@ -264,6 +264,25 @@
         <h6><a href="#">Privacy Policy | Terms of Use</a></h6>
     </section>
 
+    <script>
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
+
+
+        if (bar) {
+            bar.addEventListener('click', () => {
+                nav.classList.add('active');
+
+            })
+        }
+
+        if (close) {
+            close.addEventListener('click', () => {
+                nav.classList.remove('active');
+            })
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
